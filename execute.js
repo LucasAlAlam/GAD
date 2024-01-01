@@ -6,7 +6,7 @@ export const readline = createInterface({
     output: process.stdout
 });
 
-async function main(){
+async function main() {
     while(true) {
         console.clear();
         const resposta = await readline.question(`Insira sua opção:
@@ -20,7 +20,7 @@ async function main(){
             switch(resposta) {
                 default:
                     await readline.question(`\x1b[31;1mA opção inserida não corresponde a nenhuma da apresentadas 😠
-\x1b[33m[Aperte qualquer tecla para voltar ao menu principal]\x1b[m`);
+\n\x1b[33m[Aperte qualquer tecla para voltar ao menu principal]\x1b[m`);
                     break;
 
                 case '1':
